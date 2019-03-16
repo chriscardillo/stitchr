@@ -4,7 +4,7 @@
 \alias{sr_list_files}
 \title{Creates a tibble of file paths, preferably for csv files}
 \usage{
-sr_list_files(path = ".", type = "csv", path_column = "path")
+sr_list_files(path = ".", type = "csv")
 }
 \arguments{
 \item{path}{Relative path of file}
