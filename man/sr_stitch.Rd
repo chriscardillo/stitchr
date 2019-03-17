@@ -4,7 +4,8 @@
 \alias{sr_stitch}
 \title{Single function for stitching together data from disparate sources}
 \usage{
-sr_stitch(file_path, mapping_path, file_type = "csv")
+sr_stitch(file_path, mapping_path, file_type = "csv",
+  with_unmatched = FALSE)
 }
 \arguments{
 \item{file_path}{path to the directory of files}
