@@ -5,7 +5,7 @@ For stitching together files from disparate sources
 
 ## Quick Start
 
-A `.R` file that looks like this:
+An `.R` file that looks like this:
 
 ```r
 library(stitchr)
