@@ -5,7 +5,7 @@ For stitching together files from disparate sources
 
 ## Installation
 
-You can install `stitchr` with `devtools::install_github("chriscardillo/stitchr")`.
+You can install `stitchr` with `r devtools::install_github("chriscardillo/stitchr")`.
 
 ## Overview
 
