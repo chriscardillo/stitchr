@@ -12,11 +12,12 @@ The goal of `stitchr` is to provide an easy interface for taking many files and 
 ```r
 library(stitchr)
 
-sr_import_data("path/to/files", type = "csv") # only looks for .csv files
+sr_import("path/to/files", type = "csv") # only looks for .csv files
 ```
 
-The above creates a tibble all files paths in a certain directory that are of a specific file type and then imports all of those files in the form of a nested dataframe. `stitchr` will adhere to column names that start with `sr_` for any tibble columns it creates.
+The above creates a tibble all files paths in a certain directory that are of a specific file type and then imports all of those files in the form of a nested dataframe. `stitchr` will adhere to column names that start with `sr_` for any column that persists to the final output.
 
+Additionally, `sr_import()` defaults to looking for .csv files, but this can be amended with the `type` parameter. However, in my experience a .csv is the most trustworthy source of human-editable data due to it's singe-sheet consistency.
 
 **For creating file mappings:**
 
@@ -44,4 +45,29 @@ The `output` level tells `stitchr` what the desired column names should be in th
 
 The `inputs` level tells `stitchr` what potential files its looking for through the use of different input sources. Each input source contains key-value pairs for that map the desired final output column names to the existing column names of the input source.
 
-`stitchr` takes this mapping and converts it to a dataframe which is then used to identify which files are of a certain input source, and then alters the input source's column names in order to compile all files from every source into an aggregated state.
+This `.yml` is converted to a dataframe mapping with the `sr_mapping()` function.
+
+**For matching raw files to mapping:**
+
+`stitchr` takes this above mapping and converts it to a dataframe which is then used to identify which files are of a certain input source. This is done with the `sr_match` function.
+
+If you've set up your `.yml` mapping, the below code will provide a list a `matched_files` dataframe and `unmatched_files` dataframe for you:
+
+```r
+
+my_data <- sr_import("path/to/files")
+
+my_mapping <- sr_mapping("path/to/_mapping.yml") # you can name your mapping whatever you want
+
+sr_match(my_data, my_mapping)
+
+```
+
+For the `matched_files` dataframe, an `sr_source` column notes which source the file was determined to be, and a `header_row` column denotes on which row of the raw data the headers denoted in the mapping currently are.
+
+Ideally all of these column headers would be the column headers of the file, and - of course - the column headers would all be our desired output column headers. For this, we'll utilize `sr_cleanup()`
+
+**For creating file uniformity**
+
+More on this soon!
+
