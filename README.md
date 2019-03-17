@@ -117,7 +117,7 @@ The `inputs` level tells `stitchr` what potential files its looking for through 
 
 `sr_match()` takes the above mapping from `sr_mapping()` along all of the raw data from `sr_import()` then uses column names to identify which files are of a certain input source.
 
-Running sequentially, the below code will provide a list a `matched_files` dataframe and `unmatched_files` dataframe for you:
+Running sequentially, the below code will provide a list containing a `matched_files` dataframe and `unmatched_files` dataframe for you:
 
 ```r
 
