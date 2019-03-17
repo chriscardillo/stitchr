@@ -111,7 +111,7 @@ The `inputs` level tells `stitchr` what potential files its looking for through 
 ### Friendly Notes on `_mapping.yml`
 
 - All `output_column`s within the `inputs` layer must also be in the `output`'s `columns`.
-- `sr_mapping()` test for other common errors here, and will raise a helpful exception if `_mapping.yml` needs editing.
+- `sr_mapping()` tests for other common errors here, and will raise a helpful exception if `_mapping.yml` needs editing.
 
 ### Match
 
