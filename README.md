@@ -66,7 +66,7 @@ inputs:
     revenue: total
 ```
 
-When pointed at the directory where these `US Treasury` and `Federal Reserve` files might be, `sr_stitch()` uses the above `.mapping.yml` to identify the source of each file by its column names, and will then proceed to compile together any files matched through the mapping, while preserving the `US Treasury` and `Federal Reserve` source names and originating filenames via the `sr_source` and `sr_filename` column, respectively.
+When pointed at the directory where these `US Treasury` and `Federal Reserve` files might be, `sr_stitch()` uses the above `.mapping.yml` to identify the source of each file by its column names, and will then proceed to compile together any files matched through the mapping, all under a single `revenue` column, all while preserving the `US Treasury` and `Federal Reserve` source names and originating filenames via the `sr_source` and `sr_filename` column, respectively.
 
 ## Supporting Functions
 
