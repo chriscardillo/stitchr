@@ -69,5 +69,24 @@ Ideally all of these column headers would be the column headers of the file, and
 
 **For creating file uniformity**
 
-More on this soon!
+After files have been matched to a source, their column names can be replaced with the desired output columns, and any superfluous space between the column names and the actual data can be removed. This is done with `sr_cleanup()`.
 
+Sticking with the example above:
+
+```r
+
+my_data <- sr_import("path/to/files")
+
+my_mapping <- sr_mapping("path/to/_mapping.yml") # you can name your mapping whatever you want
+
+my_match <- sr_match(my_data, my_mapping)
+
+sr_cleanup(my_match, my_mapping)
+
+```
+
+`sr_cleanup` expects the list output from `sr_match()`, and will solely focus on the matched files.
+
+**For binding uniform files**
+
+Lastly, we'll use `sr_compile()` to safely unnest our uniform data.
