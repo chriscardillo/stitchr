@@ -1,4 +1,4 @@
-# stitchr <img src="man/figures/stitchr blue logo.png" width="120px" align="right" />
+# stitchr <img src="man/figures/stitchr blue logo.png" width="180px" align="right" />
 For stitching together files from disparate sources
 
 -----
