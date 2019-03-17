@@ -7,6 +7,33 @@ For stitching together files from disparate sources
 
 You can install `stitchr` with `devtools::install_github("chriscardillo/stitchr")`.
 
+
+## Quick Start
+
+In two short files, we can can map out, import, and aggregate all desired information in a given directory.
+
+`app.R`
+```r
+library(stitchr)
+
+sr_stitch("path/to/files", "_mapping.yml", type = "csv")
+```
+
+`_mapping.yml`
+```yml
+output:
+  columns:
+    - output_column_1
+    - output_column_2
+inputs:
+  source_1:
+    output_column_1: source1_colname_1
+  source_2:
+    output_column_1: source2_colname_1
+    output_column_2: source2_colname_2
+```
+
+
 ## Overview
 
 `stitchr` aims to provide a service for aggregating data from multiple sources easily. At the center is the `sr_stitch()` function, which when pointed at a directory reads all files of a specific file type (preferably `.csv`), and organizes them into a single tibble. `sr_stitch()` is informed of each file's potential source by the `_mapping.yml` file. 
@@ -39,31 +66,6 @@ inputs:
 ```
 
 When pointed at the directory where these `US Treasury` and `Federal Reserve` files might be, `sr_stitch()` uses the above `.mapping.yml` to identify the source of each file by its column names, and will then proceed to compile together any files matched through the mapping.
-
-## Quick Start
-
-In a few short lines, we can get all of our external data into one place.
-
-`app.R`
-```r
-library(stitchr)
-
-sr_stitch("path/to/files", "_mapping.yml", type = "csv")
-```
-
-`_mapping.yml`
-```yml
-output:
-  columns:
-    - output_column_1
-    - output_column_2
-inputs:
-  source_1:
-    output_column_1: source1_colname_1
-  source_2:
-    output_column_1: source2_colname_1
-    output_column_2: source2_colname_2
-```
 
 ## Supporting Functions
 
