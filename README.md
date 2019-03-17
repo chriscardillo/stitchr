@@ -72,7 +72,7 @@ When pointed at the directory where these `US Treasury` and `Federal Reserve` fi
 
 Behind `sr_stitchr()` are a few different stages, each with a primary function. When ran in sequence, these primary functions are the equivalent of a call to `sr_stitchr()`.
 
-###Import
+### Import
 
 ```r
 library(stitchr)
@@ -84,7 +84,7 @@ The above creates a tibble all files paths in a certain directory that are of a 
 
 Additionally, `sr_import()` defaults to looking for .csv files, but this can be amended with the `type` parameter.
 
-###Mapping
+### Mapping
 
 `sr_mapping()` imports and interprets `_mapping.yml`, then converts it into a useful object utilized in all later stages (e.g. `sr_match()`, `sr_cleanup()`).
 
@@ -113,7 +113,7 @@ The `inputs` level tells `stitchr` what potential files its looking for through 
 - All `output_column`s within the `inputs` layer must also be in the `output`'s `columns`.
 - `sr_mapping()` test for other common errors here, and will raise a helpful exception if `_mapping.yml` needs editing.
 
-###Match
+### Match
 
 `sr_match()` takes the above mapping from `sr_mapping()` along all of the raw data from `sr_import()` then uses column names to identify which files are of a certain input source.
 
@@ -131,7 +131,7 @@ sr_match(my_data, my_mapping)
 
 For the `matched_files` dataframe, an `sr_source` column notes which source the file was determined to be by `sr_match()`, and a `header_row` column denotes on which row of the raw data the headers denoted in the mapping currently are. `header_row` is not preceded with an `sr_` because it is a utility column later discarded during `sr_cleanup()`.
 
-###Cleanup
+### Cleanup
 
 `sr_cleanup()` expects the list output from `sr_match()`, and will solely focus on `matched_files`.
 
