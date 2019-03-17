@@ -23,7 +23,7 @@ sr_stitch <- function(file_path, mapping_path, file_type = "csv", with_unmatched
   
   cleanup <- sr_cleanup(match, mapping) 
   
-  if(length(match$unmatched_files) > 0){
+  if(nrow(match$unmatched_files) > 0){
     warning(
       paste0("Some files were unable to be matched: ", 
              paste0(match$unmatched_files %>% distinct() %>% pull(), collapse = ", "))

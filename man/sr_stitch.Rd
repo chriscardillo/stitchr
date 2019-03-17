@@ -20,5 +20,6 @@ Single function for stitching together data from disparate sources
 }
 \examples{
 sr_stitch("my/csvs/path", "_mapping.yml")
+sr_stitch("my/csvs/path", "_mapping.yml", with_unmatched = TRUE)
 
 }
