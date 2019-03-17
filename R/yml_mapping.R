@@ -150,9 +150,9 @@ sr_convert_yml <- function(map_list){
   mapping <- purrr::map(map_list$inputs, purrr::as_vector) %>% 
     purrr::map(as.list) %>% 
     purrr::map(dplyr::as_tibble) %>%
-    dplyr::bind_rows(.id = "source") %>%
-    tidyr::gather(key = "output", value = "input", -source) %>%
-    tidyr::spread(source, input)
+    dplyr::bind_rows(.id = "sr_source") %>%
+    tidyr::gather(key = "output", value = "input", -sr_source) %>%
+    tidyr::spread(sr_source, input)
   
   attr(mapping, 'output_columns') <- map_list$output$columns
   

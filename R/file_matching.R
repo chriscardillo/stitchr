@@ -33,8 +33,8 @@ sr_make_input_colnames <- function(file_mapping){
 
   file_mapping %>%
     dplyr::select(-output) %>%
-    tidyr::gather(source, column_name) %>%
-    dplyr::group_by(source) %>%
+    tidyr::gather(sr_source, column_name) %>%
+    dplyr::group_by(sr_source) %>%
     tidyr::nest() %>%
     dplyr::mutate(source_colnames = purrr::map(data, ~ as_vector(.x) %>% sr_clean_colnames() %>% na.omit())) %>%
     dplyr::select(-data)
