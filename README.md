@@ -39,7 +39,7 @@ This setup with return a single tibble containing any `source_1` or `source_2` f
 
 `stitchr` aims to provide a service for aggregating data from multiple sources easily. At the center is the `sr_stitch()` function, which when pointed at a directory reads all files of a specific file type (preferably `.csv`), and organizes them into a single tibble. `sr_stitch()` is informed of each file's potential source by the `_mapping.yml` file. 
 
-`_mapping.yml` contains all of the column names for each of the `inputs`, and all of the desired unified column names that will display in the final `output`. The `.yml` organized like so:
+`_mapping.yml` contains all of the column names for each of the `inputs`, and all of the desired unified column names that will display in the final `output`. The `.yml` is organized like so:
 
 
 ```yml
