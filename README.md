@@ -18,7 +18,7 @@ sr_import_data("path/to/files", type = "csv") # only looks for .csv files
 The above creates a tibble all files paths in a certain directory that are of a specific file type and then imports all of those files in the form of a nested dataframe. `stitchr` will adhere to column names that start with `sr_` for any tibble columns it creates.
 
 
-**For creating file mappings **
+**For creating file mappings:**
 
 The goal of `stitchr` is to make it easy to map multiple files to a single output. It accomplishes this task through the use of a mapping system via a `.yml` file. The `.yml` file will look something like this:
 
