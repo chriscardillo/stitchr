@@ -3,7 +3,33 @@ For stitching together files from disparate sources
 
 -----
 
-### Overview
+## Quick Start
+
+A `.R` file that looks like this:
+
+```r
+library(stitchr)
+
+sr_stitch("path/to/files", "_mapping.yml", type = "csv")
+
+```
+
+A `.yml` file that looks like this:
+
+```yml
+output:
+  columns:
+    - output_column_1
+    - output_column_2
+inputs:
+  input_source_1:
+    output_column_1: corresponding_input_source_1_col_name
+    output_column_2: corresponding_input_source_1_col_name
+  input_source_2:
+    output_column_1: corresponding_input_source_2_col_name
+```
+
+## Overview
 
 The goal of `stitchr` is to provide an easy interface for taking many files and turning them into one. This is done with a series of functions that build on top of one another.
 
@@ -89,4 +115,4 @@ sr_cleanup(my_match, my_mapping)
 
 **For binding uniform files**
 
-Lastly, we'll use `sr_compile()` to safely unnest our uniform data.
+Lastly, we'll use `sr_compile()` to safely unnest our uniform data. This is done by coercing all non-character columns to characters.
