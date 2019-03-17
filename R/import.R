@@ -49,10 +49,10 @@ sr_nested_import <- function(df, path_column = NULL){
 #' @importFrom dplyr select %>%
 #'
 #' @examples
-#' sr_import_data("path/to/data")
+#' sr_import("path/to/data")
 #'
 #' @export
-sr_import_data <- function(path = ".", type = "csv"){
+sr_import <- function(path = ".", type = "csv"){
   
   sr_list_files(path = path, type = type) %>%
     sr_nested_import() %>%

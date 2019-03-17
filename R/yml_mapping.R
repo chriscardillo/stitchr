@@ -168,11 +168,11 @@ sr_convert_yml <- function(map_list){
 #' @return A dataframe version of the file mapping
 #'
 #' @examples
-#' sr_check_yml("my_yml_map.yml")
+#' sr_mapping("my_yml_map.yml")
 #'
 #' @export
 
-sr_yml_map <- function(yml_map){
+sr_mapping <- function(yml_map){
   
   sr_check_yml(yml_map) %>%
     sr_convert_yml()
