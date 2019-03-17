@@ -1,5 +1,5 @@
 # stitchr
-An R Package for stitching together files
+For stitching together files from disparate sources
 
 -----
 
@@ -15,4 +15,4 @@ library(stitchr)
 sr_import_data("path/to/files", type = "csv") # only looks for .csv files
 ```
 
-The above simply creates a tibble all files paths in a certain directory that are of a specific file type and then imports all of those files in the form of a nested dataframe. `stitchr` will adhere to column names that start with `sr_` for any tibble columns it creates.
+The above creates a tibble all files paths in a certain directory that are of a specific file type and then imports all of those files in the form of a nested dataframe. `stitchr` will adhere to column names that start with `sr_` for any tibble columns it creates.
