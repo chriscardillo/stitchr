@@ -4,3 +4,5 @@
 .Ruserdata
 *.Rproj
 devdata
+devscript.R
+_mapping.yml

@@ -1,3 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 devdata
+_mapping.yml
+devscript.R

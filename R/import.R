@@ -10,7 +10,6 @@
 #' @examples
 #' sr_list_files("path/to/data")
 #'
-#' @export
 sr_list_files <- function(path = ".", type = "csv"){
   
   file_pattern <- paste0(".", type, "$")
@@ -33,10 +32,30 @@ sr_list_files <- function(path = ".", type = "csv"){
 #' sr_list_files("path/to/data") %>% 
 #' sr_nested_import()
 #'
-#' @export
 sr_nested_import <- function(df, path_column = NULL){
   
  df %>%
     mutate(sr_filename = basename(sr_path),
            sr_data = map(sr_path, import))
+}
+
+#' Imports files from a directory into nested dataframes and includes file names
+#'
+#' 
+#' @param df a dataframe with file paths
+#'
+#' @return a tibble file names and nested dataframes
+#'
+#' @importFrom dplyr select %>%
+#'
+#' @examples
+#' sr_import_data("path/to/data")
+#'
+#' @export
+sr_import_data <- function(path = ".", type = "csv"){
+  
+  sr_list_files(path = path, type = type) %>%
+    sr_nested_import() %>%
+    dplyr::select(-sr_path)
+  
 }
