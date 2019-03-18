@@ -3,7 +3,7 @@
 #' @importFrom dplyr %>%
 #'
 #' @param file_path path to the directory of files
-#' @param mapping_path path to the .yml mapping file
+#' @param mapping_path path to the .yml mapping file, including the file name
 #'
 #' @return a compiled dataframe of all files that were able to be successfully matched
 #'
@@ -13,7 +13,7 @@
 #' 
 #' @export
 
-sr_stitch <- function(file_path, mapping_path, file_type = "csv", with_unmatched = FALSE){
+sr_stitch <- function(file_path = ".", mapping_path, file_type = "csv", with_unmatched = FALSE){
   
   import <- sr_import(file_path, type = file_type)
   
