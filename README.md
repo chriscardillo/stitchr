@@ -71,6 +71,8 @@ inputs:
 
 When pointed at the directory where these `US Treasury` and `Federal Reserve` files might be, `sr_stitch()` uses the above `.mapping.yml` to identify the source of each file by its column names, and will then proceed to compile together any files matched through the mapping, all under a single `revenue` column, all while preserving the `US Treasury` and `Federal Reserve` source names and originating filenames via the `sr_source` and `sr_filename` column, respectively.
 
+Again, you can use `sr_create_mapping_template()` to make a template `_mapping.yml` to get you started!
+
 ## Supporting Functions
 
 Behind `sr_stitchr()` are a few different stages, each with a primary function. When ran in sequence, these primary functions are the equivalent of a call to `sr_stitchr()`.
