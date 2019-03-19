@@ -36,6 +36,8 @@ inputs:
 
 This setup with return a single tibble containing any `source_1` or `source_2` files located in `path/to/files`, where all column names from these sources are now `output_column_1` or `output_column_2`. Additionally in the tibble are the orginal file names and `stitchr`-determined sources in columns `sr_filename` and `sr_source`, respectively.
 
+**Additionally** - the `sr_create_mapping_template()` function can be used to create a template `_mapping.yml` like the above to get you started!
+
 ## Overview
 
 `stitchr` aims to provide a service for aggregating data from multiple sources easily. At the center is the `sr_stitch()` function, which when pointed at a directory reads all files of a specific file type (preferably `.csv`), and organizes them into a single tibble. `sr_stitch()` is informed of each file's potential source by the `_mapping.yml` file. 
