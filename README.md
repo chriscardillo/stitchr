@@ -28,10 +28,10 @@ output:
     - output_column_2
 inputs:
   source_1:
-    output_column_1: source1_colname_1
+    output_column_1: source_1_colname_1
   source_2:
-    output_column_1: source2_colname_1
-    output_column_2: source2_colname_2
+    output_column_1: source_2_colname_1
+    output_column_2: source_2_colname_2
 ```
 
 This setup with return a single tibble containing any `source_1` or `source_2` files located in `path/to/files`, where all column names from these sources are now `output_column_1` or `output_column_2`. Additionally in the tibble are the orginal file names and `stitchr`-determined sources in columns `sr_filename` and `sr_source`, respectively.
