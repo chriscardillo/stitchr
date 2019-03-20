@@ -15,3 +15,4 @@ a dataframe of the file mapping
 \description{
 Converts list map into a dataframe mapping
 }
+\keyword{internal}

@@ -15,3 +15,4 @@ an error if output columns are not unique
 \description{
 Tests that output columns are all unique
 }
+\keyword{internal}

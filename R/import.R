@@ -7,7 +7,7 @@
 #'
 #' @return a tibble of file names
 #'
-#' @export
+#' @keywords internal
 
 sr_list_files <- function(path = ".", type = "csv"){
   
@@ -27,7 +27,7 @@ sr_list_files <- function(path = ".", type = "csv"){
 #'
 #' @return a tibble of file names
 #'
-#' @export
+#' @keywords internal
 
 sr_nested_import <- function(df, path_column = NULL){
   

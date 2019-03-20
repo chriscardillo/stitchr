@@ -15,3 +15,4 @@ an error if any tests fail, otherwise a list object of the file mappings
 \description{
 Utility function housing all yml map checks, passes through the map as a list object if all tests pass
 }
+\keyword{internal}

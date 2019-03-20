@@ -17,3 +17,4 @@ a tibble of file names
 \description{
 Creates a tibble of file paths, preferably for csv files
 }
+\keyword{internal}

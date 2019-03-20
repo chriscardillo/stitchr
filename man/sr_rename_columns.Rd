@@ -19,3 +19,4 @@ a dataframe with the desired columns
 \description{
 Utility function for renaming columns to output column names and reducing dataframes down to the desired columns in the mapping
 }
+\keyword{internal}

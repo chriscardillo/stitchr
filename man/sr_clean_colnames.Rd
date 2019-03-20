@@ -15,3 +15,4 @@ a vector of uniform column names with no leading/trailing whitespace and all low
 \description{
 Utility function for keeping column names consistent in terms of white space and case
 }
+\keyword{internal}

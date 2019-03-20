@@ -5,7 +5,7 @@
 #'
 #' @return a vector of uniform column names with no leading/trailing whitespace and all lowercase
 #'
-#' @export
+#' @keywords internal
 
 sr_trim_headers <- function(df, row_number){
  
@@ -34,7 +34,7 @@ sr_trim_headers <- function(df, row_number){
 #'
 #' @return a dataframe with the desired columns
 #'
-#' @export
+#' @keywords internal
 
 sr_rename_columns <- function(df, source, mapping){
   

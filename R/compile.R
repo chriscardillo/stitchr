@@ -6,7 +6,7 @@
 #'
 #' @return a dataframe that is all character
 #'
-#' @export
+#' @keywords internal
 
 
 sr_make_character_frames <- function(df){

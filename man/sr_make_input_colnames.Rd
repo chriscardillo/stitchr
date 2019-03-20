@@ -15,3 +15,4 @@ a nested dateframe where each row is a source and each row has clean vectorized 
 \description{
 Utility function for putting inputs' column names in to a place they can be evaluated against nested raw data
 }
+\keyword{internal}

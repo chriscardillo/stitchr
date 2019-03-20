@@ -19,3 +19,4 @@ an integer with the row number of the correct column names - 0 if the column nam
 \description{
 Utility function for finding the row in a dataframe where column names from an input source are. (Sometimes meta data lives at the top of csv reports. We want to get rid of that)
 }
+\keyword{internal}

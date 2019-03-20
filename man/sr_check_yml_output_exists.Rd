@@ -15,3 +15,4 @@ an error if output does not exist
 \description{
 Tests that there is an output level in the .yml map, and that there is a columns parameter under it
 }
+\keyword{internal}
