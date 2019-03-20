@@ -17,7 +17,3 @@ a list with two items: one for matched files (matched_files) and one for unmatch
 \description{
 User function for taking nested raw data and file mapping to identify matched and unmatched files
 }
-\examples{
-sr_match(nested_raw_data, file_mapping)
-
-}

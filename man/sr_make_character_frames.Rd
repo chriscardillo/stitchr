@@ -15,7 +15,3 @@ a dataframe that is all character
 \description{
 User function for cleanup
 }
-\examples{
-sr_make_character_frames(my_df)
-
-}

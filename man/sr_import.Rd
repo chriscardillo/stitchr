@@ -17,7 +17,3 @@ a tibble file names and nested dataframes
 \description{
 Imports files from a directory into nested dataframes and includes file names
 }
-\examples{
-sr_import("path/to/data")
-
-}

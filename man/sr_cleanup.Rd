@@ -17,7 +17,3 @@ a dataframe with cleaned nested dataframes ready for compilation
 \description{
 User function for cleanup
 }
-\examples{
-sr_cleanup(my_df, my_mapping)
-
-}

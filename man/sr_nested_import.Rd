@@ -17,8 +17,3 @@ a tibble of file names
 \description{
 Imports files into nested dataframes
 }
-\examples{
-sr_list_files("path/to/data") \%>\% 
-sr_nested_import()
-
-}

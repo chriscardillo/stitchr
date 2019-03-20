@@ -15,7 +15,3 @@ an error if there is no inputs level at the top of the yaml
 \description{
 Tests that output columns are all unique
 }
-\examples{
-sr_check_yml_inputs_exists(map_list)
-
-}

@@ -15,8 +15,3 @@ a new .yml mapping template
 \description{
 User function for standing up a short .yml mapping template to get started
 }
-\examples{
-sr_create_mapping_template()
-sr_create_mapping_template("my_awesome_map.yml")
-
-}

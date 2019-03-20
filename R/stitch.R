@@ -8,10 +8,6 @@
 #' @param with_unmatched if TRUE, will return a list with both the compiled files in 'matched_files' and a tibble of unmatched files in 'unmatched_files'
 #'
 #' @return a compiled dataframe of all files that were able to be successfully matched
-#'
-#' @examples
-#' sr_stitch("my/csvs/path", "_mapping.yml")
-#' sr_stitch("my/csvs/path", "_mapping.yml", with_unmatched = TRUE)
 #' 
 #' @export
 

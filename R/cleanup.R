@@ -5,9 +5,7 @@
 #'
 #' @return a vector of uniform column names with no leading/trailing whitespace and all lowercase
 #'
-#' @examples
-#' sr_trim_headers(my_df, 4)
-#'
+#' @export
 
 sr_trim_headers <- function(df, row_number){
  
@@ -36,9 +34,7 @@ sr_trim_headers <- function(df, row_number){
 #'
 #' @return a dataframe with the desired columns
 #'
-#' @examples
-#' sr_trim_headers(my_df, 4)
-#'
+#' @export
 
 sr_rename_columns <- function(df, source, mapping){
   
@@ -81,9 +77,6 @@ sr_rename_columns <- function(df, source, mapping){
 #' @param mapping the mapping dataframe in its original form
 #'
 #' @return a dataframe with cleaned nested dataframes ready for compilation
-#'
-#' @examples
-#' sr_cleanup(my_df, my_mapping)
 #'
 #' @export
 

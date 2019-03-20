@@ -17,7 +17,3 @@ a vector of uniform column names with no leading/trailing whitespace and all low
 \description{
 Utility function for getting proper column names of the original file in the column names of the dataframe, as well as trimming an excess space between the headers and the start of the data.
 }
-\examples{
-sr_trim_headers(my_df, 4)
-
-}

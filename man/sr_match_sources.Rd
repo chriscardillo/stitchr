@@ -17,7 +17,3 @@ a crossing table with all input sources and which ones matched to each file. WAR
 \description{
 Takes raw nested data and nested input mapping to identify header rows / which files could be matched
 }
-\examples{
-sr_match_sources(df_nested_imports , input_colnames_df)
-
-}

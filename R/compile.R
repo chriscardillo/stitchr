@@ -6,9 +6,7 @@
 #'
 #' @return a dataframe that is all character
 #'
-#' @examples
-#' sr_make_character_frames(my_df)
-#'
+#' @export
 
 
 sr_make_character_frames <- function(df){
@@ -29,9 +27,6 @@ sr_make_character_frames <- function(df){
 #' @param mapping the dataframe mapping from sr_mapping
 #'
 #' @return a dataframe that is all character
-#'
-#' @examples
-#' sr_compile(cleaned_df)
 #'
 #' @export
 

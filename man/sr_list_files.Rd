@@ -17,7 +17,3 @@ a tibble of file names
 \description{
 Creates a tibble of file paths, preferably for csv files
 }
-\examples{
-sr_list_files("path/to/data")
-
-}

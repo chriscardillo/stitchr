@@ -15,7 +15,3 @@ an error if output columns are not unique
 \description{
 Tests that output columns are all unique
 }
-\examples{
-sr_check_yml_unique_output_cols(output_columns)
-
-}

@@ -4,9 +4,7 @@
 #'
 #' @return an error if output does not exist
 #'
-#' @examples
-#' sr_check_yml_output_exists(map_list)
-#'
+#' @export
 
 sr_check_yml_output_exists <- function(map_list){
   
@@ -31,9 +29,7 @@ sr_check_yml_output_exists <- function(map_list){
 #'
 #' @return an error if output columns are not unique
 #'
-#' @examples
-#' sr_check_yml_unique_output_cols(output_columns)
-#'
+#' @export
 
 sr_check_yml_unique_output_cols <- function(output_columns){
   
@@ -52,9 +48,7 @@ sr_check_yml_unique_output_cols <- function(output_columns){
 #'
 #' @return an error if there is no inputs level at the top of the yaml
 #'
-#' @examples
-#' sr_check_yml_inputs_exists(map_list)
-#'
+#' @export
 
 sr_check_yml_inputs_exists <- function(map_list){
   
@@ -78,9 +72,7 @@ sr_check_yml_inputs_exists <- function(map_list){
 #'
 #' @return an error if there are designated output values in the inputs that are not present in the output columns
 #'
-#' @examples
-#' sr_check_yml_io_match(potential_inputs, output_columns)
-#'
+#' @export
 
 sr_check_yml_io_match <- function(potential_inputs, output_columns){
   
@@ -110,9 +102,7 @@ sr_check_yml_io_match <- function(potential_inputs, output_columns){
 #'
 #' @return an error if any tests fail, otherwise a list object of the file mappings
 #'
-#' @examples
-#' sr_check_yml("my_yml_map.yml")
-#'
+#' @export
 
 sr_check_yml <- function(yml_map){
   
@@ -141,9 +131,7 @@ sr_check_yml <- function(yml_map){
 #'
 #' @return a dataframe of the file mapping
 #'
-#' @examples
-#' sr_convert_yml(map_list)
-#'
+#' @export
 
 sr_convert_yml <- function(map_list){
   
@@ -166,9 +154,6 @@ sr_convert_yml <- function(map_list){
 #' @param yml_map path to a yml_map file
 #'
 #' @return A dataframe version of the file mapping
-#'
-#' @examples
-#' sr_mapping("my_yml_map.yml")
 #'
 #' @export
 

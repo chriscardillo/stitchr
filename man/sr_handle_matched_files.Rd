@@ -15,7 +15,3 @@ a list with two items: one for matched files (matched_files) and one for unmatch
 \description{
 Takes full matched and unmatched files then reduces them down to their top matches / separates unmatched files
 }
-\examples{
-sr_handle_matched_files(matched_df)
-
-}

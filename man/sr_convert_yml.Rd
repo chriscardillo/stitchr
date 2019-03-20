@@ -15,7 +15,3 @@ a dataframe of the file mapping
 \description{
 Converts list map into a dataframe mapping
 }
-\examples{
-sr_convert_yml(map_list)
-
-}

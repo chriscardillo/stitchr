@@ -15,7 +15,3 @@ an error if output does not exist
 \description{
 Tests that there is an output level in the .yml map, and that there is a columns parameter under it
 }
-\examples{
-sr_check_yml_output_exists(map_list)
-
-}

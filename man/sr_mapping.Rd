@@ -15,7 +15,3 @@ A dataframe version of the file mapping
 \description{
 User function for reading in a yml mapping and concerting to a dataframe
 }
-\examples{
-sr_mapping("my_yml_map.yml")
-
-}

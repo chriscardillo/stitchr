@@ -17,7 +17,3 @@ a dataframe that is all character
 \description{
 User function for compilation
 }
-\examples{
-sr_compile(cleaned_df)
-
-}

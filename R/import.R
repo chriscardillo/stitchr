@@ -7,9 +7,8 @@
 #'
 #' @return a tibble of file names
 #'
-#' @examples
-#' sr_list_files("path/to/data")
-#'
+#' @export
+
 sr_list_files <- function(path = ".", type = "csv"){
   
   file_pattern <- paste0(".", type, "$")
@@ -28,10 +27,8 @@ sr_list_files <- function(path = ".", type = "csv"){
 #'
 #' @return a tibble of file names
 #'
-#' @examples
-#' sr_list_files("path/to/data") %>% 
-#' sr_nested_import()
-#'
+#' @export
+
 sr_nested_import <- function(df, path_column = NULL){
   
  df %>%
@@ -49,10 +46,8 @@ sr_nested_import <- function(df, path_column = NULL){
 #'
 #' @importFrom dplyr select %>%
 #'
-#' @examples
-#' sr_import("path/to/data")
-#'
 #' @export
+
 sr_import <- function(path = ".", type = "csv"){
   
   sr_list_files(path = path, type = type) %>%

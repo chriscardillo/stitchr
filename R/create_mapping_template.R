@@ -6,10 +6,6 @@
 #' @param mapping_file_name the desired name of the .yml map. Defaults to "_mapping.yml", but can be called anything that ends in ".yml"
 #'
 #' @return a new .yml mapping template
-#'
-#' @examples
-#' sr_create_mapping_template()
-#' sr_create_mapping_template("my_awesome_map.yml")
 #' 
 #' @export
 
@@ -31,6 +27,6 @@ mapping_template <- list(output = list(columns = c("output_column_1",
 
 yaml::write_yaml(mapping_template, mapping_file_name)
 
-file.edit(mapping_file_name)
+utils::file.edit(mapping_file_name)
 
 }

@@ -6,9 +6,7 @@
 #'
 #' @return a vector of uniform column names with no leading/trailing whitespace and all lowercase
 #'
-#' @examples
-#' sr_clean_colnames(c("   colnaME1 ", " col2"))
-#'
+#' @export
 
 sr_clean_colnames <- function(colnames){
   colnames %>% tolower() %>% trimws(which = "both")
@@ -25,9 +23,7 @@ sr_clean_colnames <- function(colnames){
 #'
 #' @return a nested dateframe where each row is a source and each row has clean vectorized column names
 #'
-#' @examples
-#' sr_make_input_colnames(file_mapping)
-#'
+#' @export
 
 sr_make_input_colnames <- function(file_mapping){
 
@@ -54,9 +50,7 @@ sr_make_input_colnames <- function(file_mapping){
 #'
 #' @return an integer with the row number of the correct column names - 0 if the column names are correct already, NA if the column names were not found
 #'
-#' @examples
-#' sr_find_header_row(df, c("col1", "col2", "col3"))
-#'
+#' @export
 
 
 sr_find_header_row <- function(df, source_colnames, check_length = 100){
@@ -81,7 +75,7 @@ sr_find_header_row <- function(df, source_colnames, check_length = 100){
              eval = map(data_colnames, ~ all(source_colnames %in% .x)) %>% unlist()) %>%
       filter(eval == TRUE) %>%
       select(rownum) %>%
-      head(1) %>%
+      utils::head(1) %>%
       pull(rownum)
   }
   
@@ -99,9 +93,7 @@ sr_find_header_row <- function(df, source_colnames, check_length = 100){
 #'
 #' @return a crossing table with all input sources and which ones matched to each file. WARNING: FILES CAN MATCH TO MULTIPLE SOURCES AT THIS STAGE. DO NOT USE THIS FUNCTION AS AN END USER.
 #'
-#' @examples
-#' sr_match_sources(df_nested_imports , input_colnames_df)
-#'
+#' @export
 
 sr_match_sources <- function(df_nested_imports, input_colnames_df){
 
@@ -126,9 +118,7 @@ sr_match_sources <- function(df_nested_imports, input_colnames_df){
 #'
 #' @return a list with two items: one for matched files (matched_files) and one for unmatched files (unmatched_files)
 #'
-#' @examples
-#' sr_handle_matched_files(matched_df)
-#'
+#' @export
 
 sr_handle_matched_files <- function(matched_df){
 
@@ -161,9 +151,6 @@ sr_handle_matched_files <- function(matched_df){
 #' @param file_mapping file map that comes from sr_yml_map
 #'
 #' @return a list with two items: one for matched files (matched_files) and one for unmatched files (unmatched_files)
-#'
-#' @examples
-#' sr_match(nested_raw_data, file_mapping)
 #'
 #' @export
 
