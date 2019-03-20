@@ -1,5 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+.DS_Store
 devdata
 _mapping.yml
 devscript.R

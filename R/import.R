@@ -42,7 +42,8 @@ sr_nested_import <- function(df, path_column = NULL){
 #' Imports files from a directory into nested dataframes and includes file names
 #'
 #' 
-#' @param df a dataframe with file paths
+#' @param path a path to a directory with files
+#' @param type file type to compile - no . needed!
 #'
 #' @return a tibble file names and nested dataframes
 #'

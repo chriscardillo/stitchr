@@ -27,7 +27,7 @@ sr_check_yml_output_exists <- function(map_list){
 
 #' Tests that output columns are all unique
 #'
-#' @param output_columns
+#' @param output_columns the vector of desired columns in the final output
 #'
 #' @return an error if output columns are not unique
 #'

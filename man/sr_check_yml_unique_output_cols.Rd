@@ -7,7 +7,7 @@
 sr_check_yml_unique_output_cols(output_columns)
 }
 \arguments{
-\item{output_columns}{}
+\item{output_columns}{the vector of desired columns in the final output}
 }
 \value{
 an error if output columns are not unique

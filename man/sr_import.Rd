@@ -7,7 +7,9 @@
 sr_import(path = ".", type = "csv")
 }
 \arguments{
-\item{df}{a dataframe with file paths}
+\item{path}{a path to a directory with files}
+
+\item{type}{file type to compile - no . needed!}
 }
 \value{
 a tibble file names and nested dataframes
